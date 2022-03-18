@@ -1,0 +1,51 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: linear-gradient(#FBAA60,#FBC490,#F67B50);
+    background-repeat: no-repeat;
+}
+
+/* Styling the Navigation Bar Element */
+nav li {
+    list-style-type: none;
+    color: #A82810;
+}
+
+#timeDec {
+    text-align: center;
+    display: block;
+    float: right;
+    padding-bottom: 100px;
+    padding-right: 50px;
+}
+
+.header {
+    color: #A82810;
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  /* Edit Later */
+  .answerDec {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .hide {
+      display: none;
+  }
+
+  .buttonDec {
+      background-color: peru;
+      color: white;
+  }
+
+  #button:hover {
+      cursor: pointer;
+      color: #FBC490;
+  }

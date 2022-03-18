@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <!-- Mobile optimized <meta> tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CODE QUIZ</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+<body>
+    <nav>
+        <li>
+            <a id="highScores"><strong>HighScores!</strong></a>
+        </li>
+        <li id="timeDec">
+            <a id="timer"></a>
+        </li>
+    </nav>
+
+    <!-- Going to the the box for the Quiz Menu -->
+    <header id="QuizStarterMenu" class="header">
+        <!-- Gonna be the box for the questions  -->
+        <div id="questionBox" class="hide">
+            <!-- The box in the box for the question for the question being asked -->
+            <h1 id="askQuestion"></h1>
+            <!-- The box that holds the answer choices -->
+            <section id="answerChoices" class="answerDec"></section>
+        </div>
+
+        <section id="quizIntro">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the folloing code related questions within the 
+                time limit of 60 seconds, any incorret answers will subtract 10 
+                seconds from your clock.</p>
+        </section>
+
+        <form class="hide" id="scoresList">
+            <label for="score">Enter Name:</label>
+            <input type="text" for="toRecordScore" id="userScore"/>
+            <input type="submit" id="submitButton"/>
+        </form>
+
+        <div id="recordedHighScores" class="hide">
+            <h2>Scores</h2>
+            <li id="lsitOfScores"></li>
+        </div>
+
+        <div id="startButton" class="buttonDec">
+            <button>
+                Start Quiz!
+            </button>
+        </div>
+
+    </header>
+    <!-- JS LINK -->
+    <script src="script.js"></script>
+</body>
+</html>
