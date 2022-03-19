@@ -78,11 +78,11 @@ let startQuiz = true;
 let randomQuestion;
 
 // Event Listener to start timer
-startButton.addEventListener("click", timerStart)
+startButton.addEventListener("click", timeStart)
 
 function timeStart() {
-    for(;;startQuiz) {
-        timerStarts = setInterval(function() {
+    if(startQuiz) {
+        timeStart = setInterval(function() {
         timeSet--;
         timer.textContent = "Time: " + timeSet;
 
@@ -112,6 +112,14 @@ function nextIndex() {
     nextQuestion(randomQuestion[questionArrayIndex]);
 }
 
+
+// Re-Setting the Buttons once Question is Answered
+function resetQuestion() {
+    while(answerChoice.firstChild) {
+        answerChoice.removeChild(answerChoice.firstChild)
+    }
+}
+
 // Getting buttons to display for the questions
 function nextQuestion(question) {
     askQuestion.innerText = question.question;
@@ -125,15 +133,7 @@ function nextQuestion(question) {
             ansButton.textContent("Wrong!");
         }
         ansButton.addEventListener("click", selectedAnswer);
-        answerChoice.appendChild(ansButton);
     });
-}
-
-// Re-Setting the Buttons once Question is Answered
-function resetQuestion() {
-    while(answerChoice.firstChild) {
-        answerChoice.removeChild(answerChoice.firstChild)
-    }
 }
 
 // Resetting the timer 10 seconds if the question is answered wrong
