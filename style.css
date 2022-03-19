@@ -2,23 +2,23 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
+/*  
+#bodyDec {
     background-color: linear-gradient(#FBAA60,#FBC490,#F67B50);
     background-repeat: no-repeat;
-}
+} */
 
 /* Styling the Navigation Bar Element */
-nav li {
+nav {
     list-style-type: none;
     color: #A82810;
 }
 
-#timeDec {
+.timeDec {
     text-align: center;
     display: block;
     float: right;
-    padding-bottom: 100px;
-    padding-right: 50px;
+    padding-right: 500px;
 }
 
 .header {

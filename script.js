@@ -74,14 +74,14 @@ let listOfScores = document.getElementById("listOfScores");
 
 let startButton = document.getElementById("startButton");
 
-let startQuiz = false;
+let startQuiz = true;
 let randomQuestion;
 
 // Event Listener to start timer
 startButton.addEventListener("click", timerStart)
 
 function timeStart() {
-    if(!startQuiz) {
+    for(;;startQuiz) {
         timerStarts = setInterval(function() {
         timeSet--;
         timer.textContent = "Time: " + timeSet;
@@ -198,4 +198,5 @@ function finalScoreArray() {
     resetQuiz.addEventListener("click", function() {
         location.reload("index.html");
     });
+
 }

@@ -12,13 +12,17 @@
 
 <body>
     <nav>
-        <li>
-            <a id="highScores"><strong>HighScores!</strong></a>
-        </li>
-        <li id="timeDec">
-            <a id="timer"></a>
-        </li>
+        <a id="highScores"><strong>HighScores!</strong></a>
+        <a id="timer" class="timerDec"><strong>Timer</strong></a>
+        
     </nav>
+
+    <section id="quizIntro" class = "header">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the folloing code related questions within the 
+            time limit of 60 seconds, any incorret answers will subtract 10 
+            seconds from your clock.</p>
+    </section>
 
     <!-- Going to the the box for the Quiz Menu -->
     <header id="QuizStarterMenu" class="header">
@@ -30,13 +34,7 @@
             <section id="answerChoices" class="answerDec"></section>
         </div>
 
-        <section id="quizIntro">
-            <h1>Coding Quiz Challenge</h1>
-            <p>Try to answer the folloing code related questions within the 
-                time limit of 60 seconds, any incorret answers will subtract 10 
-                seconds from your clock.</p>
-        </section>
-
+     
         <form class="hide" id="scoresList">
             <label for="score">Enter Name:</label>
             <input type="text" for="toRecordScore" id="userScore"/>
