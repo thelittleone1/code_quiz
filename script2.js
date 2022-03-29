@@ -71,14 +71,14 @@ var timeleft = 61;
 var timerInterval;
 var score = 0;
 var correctAnswerEl;
-var currentQuestion = questions[initialquestionIndex];
+// var currentQuestion = questions[initialquestionIndex];
 
 // Function to generate the quizQuestions
 function quizQuestions() {
     if (initialquestionIndex === finalQuestionIndex) {
         return showScore();
     }
-    currentQuestion;
+    var currentQuestion = questions[initialquestionIndex];
     askQuestionEl.innerHTML = currentQuestion.question;
     buttonA.innerHTML = currentQuestion.choiceA;
     buttonB.innerHTML = currentQuestion.choiceB;
@@ -190,7 +190,7 @@ function replayQuiz() {
 
 // This function checks that user selects the wrong or right answer
 function correctAnswer(answer) {
-    correctAnswerEl = currentQuestion.correctAnswer;
+    correctAnswerEl = questions[initialquestionIndex].correctAnswer;
 
     if (answer === correctAnswerEl && initialquestionIndex !== finalQuestionIndex) {
         alert("Correct!");
