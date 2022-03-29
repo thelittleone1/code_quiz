@@ -194,6 +194,7 @@ function correctAnswer(answer) {
 
     if (answer === correctAnswerEl && initialquestionIndex !== finalQuestionIndex) {
         alert("Correct!");
+        score += 1;
         initialquestionIndex++;
         currentQuestion = questions[initialquestionIndex]
         quizQuestions();
