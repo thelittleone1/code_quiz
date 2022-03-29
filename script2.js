@@ -195,11 +195,13 @@ function correctAnswer(answer) {
     if (answer === correctAnswerEl && initialquestionIndex !== finalQuestionIndex) {
         alert("Correct!");
         initialquestionIndex++;
+        currentQuestion = questions[initialquestionIndex]
         quizQuestions();
     } else if (answer !== correctAnswerEl && initialquestionIndex !== finalQuestionIndex) {
         alert("Wrong!")
         timeleft = timeleft - 10;
         initialquestionIndex++;
+        currentQuestion = questions[initialquestionIndex];
         quizQuestions();
     } else {
         showScore();
