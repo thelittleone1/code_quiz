@@ -71,6 +71,7 @@ let scoresList = document.getElementById("scoresList");
 let userScore = document.getElementById("userScore");
 let submitButton = document.getElementById("submitButton");
 let listOfScores = document.getElementById("listOfScores");
+let submitButtn = document.getElementById("submitButton");
 
 let startButton = document.getElementById("startButton");
 
@@ -93,9 +94,10 @@ function timeStart() {
 
             if (timeSet == 0 && confirm("Eeeek, you're out of time, wanna try again") == true) {
                 clearInterval(timeSet);
+                location.reload("index.html");
             }
         }, 1000)
-    }
+    } 
 }
 
 function beginQuiz() {
