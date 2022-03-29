@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <meta charset="UTF-8"/>
+        <meta   charset="UTF-8"/>
         <!-- Mobile optimized <meta> tag -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CODE QUIZ</title>
@@ -11,8 +11,7 @@
 
 <body>
     <nav id="nav">
-        <a id="highScores"><strong>HighScores!</strong></a>
-        <a id="timer" class="timerDec"><strong>Timer</strong></a>
+        <a id="headerHighScores"><strong>HighScores!</strong></a>
     </nav>
 
     <section id="quizIntro" class = "header">
@@ -20,36 +19,50 @@
         <p>Try to answer the folloing code related questions within the 
             time limit of 60 seconds, any incorret answers will subtract 10 
             seconds from your clock.</p>
+            <button id="startButton">Start</button>
     </section>
 
     <!-- Going to the the box for the Quiz Menu -->
-    <header id="QuizStarterMenu" class="header">
+    <header id="quizStarterMenu" class="header">
+        <div id="timer">Time:</div>
         <!-- Gonna be the box for the questions  -->
         <div id="questionBox" class="hide">
             <!-- The box in the box for the question for the question being asked -->
             <h1 id="askQuestion"></h1>
             <!-- The box that holds the answer choices -->
-            <section id="answerChoices" class="answerDec"></section>
+                <button id="a" onclick="correctAnswer('a')">A</button>
+                <button id="b" onclick="correctAnswer('b')">B</button>
+                <button id="c" onclick="correctAnswer('c')">C</button>
+                <button id="d" onclick="correctAnswer('d')">D</button>
         </div>
 
-     
-        <form class="hide" id="scoresList">
-            <label for="score">Enter Name:</label>
-            <input type="text" for="toRecordScore" id="userScore"/>
-            <input type="submit" id="submitButton"/>
-        </form>
-
-        <div id="recordedHighScores" class="hide">
-            <h2>Scores</h2>
-            <li id="lsitOfScores"></li>
+        <div id="gameOver">
+            <form class="hide" id="scoreList">
+                <label for="enterName">Enter Name:</label>
+                    <input type="text" for="initials" id="initials"/>
+                    <button id="submitButton">Submit Score</button>
+            </form>
         </div>
 
-        <div id="startButton" class="buttonDec">
-            <button>
-                Start Quiz!
-            </button>
+        <div id="highscoreContainer" class="hide">
+            <div id="highScorePage">
+                <div id="highScoreHeader">
+                    <h3>User Name</h3>
+                    <h3>User Score</h3>
+                </div>
+            </div>
+            <div id="highScoreInitials"></div>
+            <div id="highScoreScore"></div>
         </div>
+
+        <div id="endGame" class="hide"> 
+            <button id="playAgain">Play Again</button>
+            <button id="clearnHighScore">Clear Scores</button>
+        </div>
+
     </header>
-    <script src="script.js"></script>
+
+    <script src="script2.js"></script>
+
 </body>
 </html>
