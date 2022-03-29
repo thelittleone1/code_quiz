@@ -104,9 +104,10 @@ function startQuiz() {
 function showScore() {
     quizIntroEl.classList.add("hide");
     gameOver.style.display = "flex";
+    scoreListEl.classList.remove("hide");
     clearInterval(timerInterval);
     highScoreInitials.value = "";
-    scoreListEl.innerHTML = "Your score is: " + score;
+    scoreListEl.innerHTML = "Your score is: " + timeleft;
 }
 
 function correctAnswer(answer) {
@@ -118,6 +119,7 @@ function correctAnswer(answer) {
         quizQuestions();
     } else if (answer !== correctAnswerEl && initialquestionIndiex !== finalQuestionIndex) {
         alert("Wrong!")
+        timeleft = timeleft - 10;
         initialquestionIndiex++;
         quizQuestions();
     } else {
